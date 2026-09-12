@@ -1,0 +1,42 @@
+{
+  "name": "mobidrop_mobicube",
+  "display_name": "MobiDrop MobiCube",
+  "family": "vendor_specific_droplet_umi",
+  "description": "MobiDrop/MobiCube single-cell 3' RNA-seq processed by MobiVision. Public FASTQs generally require MobiDrop-specific barcode whitelist correction and preprocessing before STAR-based mapping.",
+  "read_structure": {
+    "mode": "manual_review"
+  },
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "notes": [
+    "UniScFlow downloads and records platform inference for MobiCube/MobiVision datasets, but stops before automatic read assignment and mapping.",
+    "Use MobiDrop/MobiVision documentation or validated platform-specific preprocessing resources to extract barcode/UMI information before downstream alignment."
+  ],
+  "external_targets": [
+    "mobivision",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "MobiDrop/MobiCube data require MobiVision-compatible chemistry, barcode correction resources, and a matching MobiVision reference index.",
+    "required_inputs": [
+      "MobiDrop/MobiCube chemistry version and matching MobiVision software/resources",
+      "MobiVision-compatible reference index"
+    ],
+    "next_steps": [
+      "Confirm the MobiDrop/MobiCube kit version and library type.",
+      "Build or obtain the matching MobiVision reference index.",
+      "Run MobiVision quantify and preserve the exact command, software version, and validated matrix."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "MobiVision",
+        "url": "https://www.mobidrop.com/bioinformatics/",
+        "role": "MobiDrop-supported barcode processing and quantification"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "Use the validated MobiVision matrix downstream; UniScFlow does not substitute generic barcode correction."
+  }
+}

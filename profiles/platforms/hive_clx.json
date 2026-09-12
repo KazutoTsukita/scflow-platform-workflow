@@ -1,0 +1,38 @@
+{
+  "name": "hive_clx",
+  "family": "vendor_specific_droplet_umi",
+  "description": "Honeycomb Biotechnologies HIVE CLX data requiring BeeNet or equivalent vendor-specific preprocessing.",
+  "cell_barcode_read": "protocol_specific",
+  "umi_read": "protocol_specific",
+  "whitelist_policy": "vendor",
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "beenet",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "HIVE CLX barcode decoding and correction require the matching Honeycomb chemistry and BeeNetPLUS resources; these cannot be reconstructed reliably from generic FASTQ structure alone.",
+    "required_inputs": [
+      "HIVE CLX kit/chemistry version and the matching BeeNetPLUS analysis configuration",
+      "Reference genome and annotation compatible with the intended comparison"
+    ],
+    "next_steps": [
+      "Confirm the HIVE CLX kit version from the methods or depositor metadata.",
+      "Run the downloaded FASTQs through BeeNetPLUS with the matching reference.",
+      "Archive the BeeNetPLUS configuration and exported count matrix or BAM with the UniScFlow halt marker."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "BeeNetPLUS",
+        "url": "https://honeycomb.bio/resources/beenetplus/",
+        "role": "Honeycomb-supported HIVE CLX preprocessing and quantification"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "Use the BeeNetPLUS matrix/BAM as the downstream endpoint; UniScFlow does not generate a generic HIVE CLX mapper command."
+  }
+}

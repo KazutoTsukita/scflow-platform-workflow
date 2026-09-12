@@ -1,0 +1,39 @@
+{
+  "name": "singleron_gexscope",
+  "family": "vendor_specific_droplet_umi",
+  "description": "Singleron GEXSCOPE/SCOPE-chip droplet UMI data. Public FASTQs can appear as long paired-end reads and require Singleron-specific barcode/UMI extraction plus poly-A/adapter handling before STAR/STARsolo-compatible mapping.",
+  "cell_barcode_read": "protocol_specific",
+  "umi_read": "protocol_specific",
+  "whitelist_policy": "vendor_or_protocol_specific",
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "notes": "UniScFlow detects Singleron/GEXSCOPE/SCOPE-chip metadata and intentionally halts after download until a validated Singleron preprocessing path is provided.",
+  "external_targets": [
+    "singleron_scope",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "Singleron GEXSCOPE/SCOPE-chip processing requires kit-specific barcode extraction, whitelist correction, and poly-A/adapter handling before alignment.",
+    "required_inputs": [
+      "Singleron kit/chemistry version and matching barcode configuration",
+      "CeleScope-compatible reference and any sample-specific library configuration"
+    ],
+    "next_steps": [
+      "Confirm the Singleron kit and chemistry version from methods or depositor metadata.",
+      "Run CeleScope with the matching chemistry, barcode resources, and reference.",
+      "Archive the CeleScope command/configuration and validate its feature-barcode matrix."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "CeleScope",
+        "url": "https://github.com/singleron-RD/CeleScope",
+        "role": "Singleron-oriented barcode processing, alignment, and quantification"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "Use the validated CeleScope matrix downstream; UniScFlow does not replace the kit-specific barcode extraction with generic STARsolo settings."
+  }
+}

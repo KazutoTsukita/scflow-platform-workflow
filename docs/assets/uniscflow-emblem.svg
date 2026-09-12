@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1280 480">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7 {
+        stroke-linecap: round;
+      }
+
+      .st0, .st3 {
+        stroke-width: 7px;
+      }
+
+      .st0, .st8, .st7 {
+        stroke: #ffd166;
+      }
+
+      .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20, .st21, .st22 {
+        isolation: isolate;
+      }
+
+      .st9, .st10, .st23, .st24 {
+        fill: #47d7ac;
+      }
+
+      .st9, .st11, .st13, .st15, .st16, .st17, .st18, .st20, .st21, .st22 {
+        font-family: ArialMT, Arial;
+      }
+
+      .st9, .st15, .st18, .st22 {
+        font-size: 28px;
+      }
+
+      .st1, .st2, .st4, .st7 {
+        stroke-width: 5px;
+      }
+
+      .st1, .st15, .st19, .st25, .st6 {
+        stroke: #fff;
+      }
+
+      .st1, .st25 {
+        stroke-opacity: .2;
+      }
+
+      .st10, .st12, .st19 {
+        font-family: Arial-BoldMT, Arial;
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      .st11 {
+        fill: #90aaa4;
+        font-size: 16px;
+      }
+
+      .st2, .st3, .st23, .st26 {
+        stroke: #47d7ac;
+      }
+
+      .st2, .st15, .st19, .st4, .st25, .st5, .st6, .st7 {
+        fill: none;
+      }
+
+      .st27, .st8, .st18 {
+        fill: #ffd166;
+      }
+
+      .st28, .st23, .st8 {
+        stroke-opacity: .7;
+      }
+
+      .st28, .st29 {
+        fill: #ff6b6b;
+      }
+
+      .st28, .st8 {
+        fill-opacity: .1;
+      }
+
+      .st28, .st4 {
+        stroke: #ff6b6b;
+      }
+
+      .st30, .st17 {
+        fill: #e8fff8;
+      }
+
+      .st12, .st22 {
+        fill: #b9d9d2;
+      }
+
+      .st23 {
+        fill-opacity: .2;
+      }
+
+      .st13 {
+        fill: #9fe8d7;
+      }
+
+      .st13, .st17 {
+        font-size: 29px;
+      }
+
+      .st16 {
+        fill: #fff3c4;
+      }
+
+      .st16, .st20, .st21 {
+        font-size: 25px;
+      }
+
+      .st19, .st25 {
+        stroke-width: 2px;
+      }
+
+      .st20 {
+        fill: #dffdf4;
+      }
+
+      .st5 {
+        stroke: url(#_名称未設定グラデーション_2);
+        stroke-width: 11px;
+      }
+
+      .st6 {
+        stroke-opacity: 0;
+        stroke-width: 56px;
+      }
+
+      .st31 {
+        fill: url(#_名称未設定グラデーション_3);
+        stroke: #66e3c4;
+        stroke-opacity: .4;
+      }
+
+      .st26 {
+        fill: #07141d;
+        stroke-width: 6px;
+      }
+
+      .st21 {
+        fill: #ffe0df;
+      }
+
+      .st32 {
+        fill: url(#_名称未設定グラデーション);
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション" data-name="名称未設定グラデーション" x1="1366.8" y1="1.7" x2="1367.8" y2="2.7" gradientTransform="translate(-1640192 -694) scale(1200 420)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#081823"/>
+      <stop offset=".6" stop-color="#0b2f37"/>
+      <stop offset="1" stop-color="#14221d"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_2" data-name="名称未設定グラデーション 2" x1="1366.4" y1="3.9" x2="1367.4" y2="3.9" gradientTransform="translate(-1311786 -612) scale(960 218)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#47d7ac"/>
+      <stop offset=".5" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_3" data-name="名称未設定グラデーション 3" x1="1363.7" y1="2.7" x2="1364.7" y2="3.7" gradientTransform="translate(-436266 -620) scale(320 272)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#143c46"/>
+      <stop offset="1" stop-color="#0b202a"/>
+    </linearGradient>
+  </defs>
+  <rect class="st32" x="40" y="30" width="1200" height="420" rx="36" ry="36"/>
+  <path class="st6" d="M111,358c185-180,349,66,516-98,140-136,283-95,454-138"/>
+  <path class="st5" d="M117,350c182-168,339,50,502-90,136-116,278-84,458-128"/>
+  <g>
+    <rect class="st31" x="117" y="124" width="320" height="272" rx="28" ry="28"/>
+    <circle class="st29" cx="146" cy="166" r="8"/>
+    <circle class="st27" cx="176" cy="166" r="8"/>
+    <circle class="st24" cx="206" cy="166" r="8"/>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st17" transform="translate(138 229)"><tspan x="0" y="0">&gt; uniscflow</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st13" transform="translate(138 270)"><tspan x="0" y="0">--mode all</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st13" transform="translate(138 307)"><tspan x="0" y="0">--platform auto</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st18" transform="translate(168 344)"><tspan x="0" y="0">PRJNA/GSE </tspan><tspan x="0" y="33.6">-&gt; count matrices</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <circle class="st26" cx="591.4" cy="260.8" r="123.4"/>
+    <circle class="st25" cx="591.4" cy="260.8" r="84.6"/>
+    <path class="st3" d="M509.2,260.8h164.6"/>
+    <path class="st0" d="M591.4,178.5v164.6"/>
+    <path class="st1" d="M535,204.4l112.9,112.9"/>
+    <path class="st1" d="M647.9,204.4l-112.9,112.9"/>
+    <g>
+      <circle class="st29" cx="591.4" cy="178.5" r="11.8"/>
+      <circle class="st29" cx="673.7" cy="260.8" r="11.8"/>
+      <circle class="st29" cx="591.4" cy="343.1" r="11.8"/>
+      <circle class="st29" cx="509.2" cy="260.8" r="11.8"/>
+    </g>
+    <g>
+      <path class="st30" d="M558.5,229.1h0c2.6,0,4.7,2.1,4.7,4.7v54.1c0,2.6-2.1,4.7-4.7,4.7h0c-2.6,0-4.7-2.1-4.7-4.7v-54.1c0-2.6,2.1-4.7,4.7-4.7h0Z"/>
+      <path class="st30" d="M577.3,213.8h0c2.6,0,4.7,2.1,4.7,4.7v84.6c0,2.6-2.1,4.7-4.7,4.7h0c-2.6,0-4.7-2.1-4.7-4.7v-84.6c0-2.6,2.1-4.7,4.7-4.7Z"/>
+      <path class="st30" d="M596.2,238.5h0c2.6,0,4.7,2.1,4.7,4.7v35.3c0,2.6-2.1,4.7-4.7,4.7h0c-2.6,0-4.7-2.1-4.7-4.7v-35.3c0-2.6,2.1-4.7,4.7-4.7Z"/>
+      <path class="st30" d="M615,220.8h0c2.6,0,4.7,2.1,4.7,4.7v70.5c0,2.6-2.1,4.7-4.7,4.7h0c-2.6,0-4.7-2.1-4.7-4.7v-70.5c0-2.6,2.1-4.7,4.7-4.7Z"/>
+      <path class="st30" d="M633.8,243.2h0c2.6,0,4.7,2.1,4.7,4.7v25.9c0,2.6-2.1,4.7-4.7,4.7h0c-2.6,0-4.7-2.1-4.7-4.7v-25.9c0-2.6,2.1-4.7,4.7-4.7Z"/>
+    </g>
+  </g>
+  <g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st22" transform="translate(208.6 78.7)"><tspan x="0" y="0">Platform-aware, one-command public scRNA-seq reprocessing</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st15" transform="translate(208.6 78.7)"><tspan x="0" y="0">Platform-aware, one-command public scRNA-seq reprocessing</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st9" transform="translate(208.6 78.7)"><tspan x="0" y="0">Platform-aware, one-command public scRNA-seq reprocessing</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <path class="st23" d="M750,294h84c11.6,0,21,9.4,21,21h0c0,11.6-9.4,21-21,21h-84c-11.6,0-21-9.4-21-21h0c0-11.6,9.4-21,21-21Z"/>
+    <path class="st8" d="M900,294h108c11.6,0,21,9.4,21,21h0c0,11.6-9.4,21-21,21h-108c-11.6,0-21-9.4-21-21h0c0-11.6,9.4-21,21-21Z"/>
+    <path class="st28" d="M1074,294h94c11.6,0,21,9.4,21,21h0c0,11.6-9.4,21-21,21h-94c-11.6,0-21-9.4-21-21h0c0-11.6,9.4-21,21-21Z"/>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st20" transform="translate(770 323)"><tspan x="0" y="0">infer</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st16" transform="translate(912 323)"><tspan x="0" y="0">prepare</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st21" transform="translate(1098 323)"><tspan x="0" y="0">map</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g>
+    <path class="st2" d="M732,358h109.5"/>
+    <path class="st2" d="M837.9,349l17,9-17,9"/>
+    <path class="st7" d="M891.9,358h109.5"/>
+    <path class="st7" d="M997.7,349l17,9-17,9"/>
+    <path class="st4" d="M1060,358h109.5"/>
+    <path class="st4" d="M1165.9,349l17,9-17,9"/>
+  </g>
+  <g class="st14">
+    <g class="st14">
+      <g class="st14">
+        <text class="st11" transform="translate(720 396)"><tspan x="0" y="0">GEO/SRA/ENA -&gt; FASTQ roles -&gt; STARsolo / STAR + featureCounts</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st12" transform="translate(483 126.3)"><tspan x="0" y="0">UniScFlow</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st19" transform="translate(483 126.3)"><tspan x="0" y="0">UniScFlow</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g class="st14">
+      <g class="st14">
+        <g class="st14">
+          <text class="st10" transform="translate(483 126.3)"><tspan x="0" y="0">UniScFlow</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

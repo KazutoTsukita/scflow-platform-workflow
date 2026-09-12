@@ -1,0 +1,19 @@
+{
+  "name": "smartseq2",
+  "family": "plate_full_length",
+  "description": "Smart-seq2 full-length plate-based scRNA-seq without droplet cell barcodes or UMIs.",
+  "cell_barcode_read": "none",
+  "umi_read": "none",
+  "cell_identity": "sample_or_manifest",
+  "whitelist_policy": "none",
+  "supported_targets": [
+    "star_featurecounts",
+    "salmon"
+  ],
+  "default_target": "star_featurecounts",
+  "cellranger_supported": false,
+  "external_targets": [
+    "star",
+    "kallisto"
+  ]
+}

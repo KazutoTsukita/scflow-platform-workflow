@@ -1,0 +1,39 @@
+{
+  "name": "pipseq",
+  "family": "vendor_specific_droplet_umi",
+  "description": "Fluent BioSciences PIPseq single-cell RNA data requiring PIPseeker-compatible chemistry-specific processing.",
+  "cell_barcode_read": "protocol_specific",
+  "umi_read": "protocol_specific",
+  "whitelist_policy": "vendor_or_protocol_specific",
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "notes": "UniScFlow recognizes explicit sample-level PIPseq wet-lab metadata and intentionally halts after download rather than substituting generic 10x or STARsolo barcode settings.",
+  "external_targets": [
+    "pipseeker",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "PIPseq barcode and UMI processing depend on the matching Fluent BioSciences kit generation and PIPseeker configuration; generic droplet settings are not a validated substitute.",
+    "required_inputs": [
+      "PIPseq kit and capacity/version, such as T2, T10, or T20, with the matching PIPseeker release",
+      "PIPseeker-compatible reference genome and annotation"
+    ],
+    "next_steps": [
+      "Confirm the PIPseq capture kit and chemistry version from the sample protocol or methods.",
+      "Run the downloaded FASTQs with the matching PIPseeker chemistry and reference configuration.",
+      "Archive the PIPseeker command and configuration, then validate the resulting gene-by-cell matrix before resuming downstream analysis."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "PIPseeker",
+        "url": "https://www.fluentbio.com/products/pipseeker-software/",
+        "role": "Fluent BioSciences-supported PIPseq barcode processing, alignment, and quantification"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "Use the validated PIPseeker matrix downstream; UniScFlow does not replace PIPseq chemistry-specific barcode processing with generic STARsolo settings."
+  }
+}

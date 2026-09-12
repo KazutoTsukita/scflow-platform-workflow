@@ -1,0 +1,40 @@
+{
+  "name": "quartz_seq",
+  "display_name": "Quartz-seq",
+  "family": "plate_full_length",
+  "description": "Quartz-seq full-length single-cell RNA-seq. Public data can be plate-like and require sample/well metadata review before automatic mapping.",
+  "cell_barcode_read": "none",
+  "umi_read": "none",
+  "cell_identity": "sample_or_manifest",
+  "whitelist_policy": "none",
+  "supported_targets": [
+    "manual_review",
+    "star_featurecounts"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "notes": "UniScFlow recognizes Quartz-seq and routes it to download plus documented halt by default. Mapping can be resumed after confirming the sample or well structure.",
+  "external_targets": [
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "Quartz-seq variants differ in full-length/3-prime behavior and barcode/UMI use; the protocol variant and well identity must be resolved before choosing a mapper.",
+    "required_inputs": [
+      "Quartz-seq protocol version and cell/well-to-sample manifest",
+      "Confirmed barcode/UMI status, read pairing, and strandedness"
+    ],
+    "next_steps": [
+      "Identify the exact Quartz-seq protocol variant from the methods or supplementary files.",
+      "Recover the cell/well map and determine whether custom barcode/UMI parsing is required.",
+      "Use the explicit STAR-featureCounts target only for confirmed full-length non-UMI inputs; otherwise use the protocol-matched workflow."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "UniScFlow STAR-featureCounts target",
+        "role": "Confirmed full-length non-UMI Quartz-seq after explicit well-map review"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "Do not resume from the Quartz-seq name alone; confirm the protocol variant, then use STAR-featureCounts only when full-length non-UMI assumptions hold."
+  }
+}

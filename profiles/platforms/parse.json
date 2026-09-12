@@ -1,0 +1,38 @@
+{
+  "name": "parse",
+  "family": "combinatorial_indexing",
+  "description": "Parse Biosciences Evercode-style combinatorial indexing data.",
+  "cell_barcode_read": "combinatorial",
+  "umi_read": "protocol_specific",
+  "whitelist_policy": "vendor_or_custom",
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "parse_pipeline",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "Parse Evercode combinatorial indexing requires kit-specific barcode lists and a sample/library manifest that cannot be reconstructed reliably from public FASTQs alone.",
+    "required_inputs": [
+      "Evercode kit and chemistry version",
+      "Parse sample/library manifest, barcode resources, and matching reference"
+    ],
+    "next_steps": [
+      "Identify the Evercode kit version and obtain the corresponding split-pipe resources.",
+      "Reconstruct and verify the sample/library manifest from depositor supplements or methods.",
+      "Run split-pipe and archive the manifest, command, and resulting count matrix."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "Parse Biosciences split-pipe",
+        "url": "https://support.parsebiosciences.com/",
+        "role": "Kit-aware combinatorial-barcode parsing and matrix generation"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "Use split-pipe output downstream; UniScFlow does not infer missing Parse manifests or barcode resources."
+  }
+}

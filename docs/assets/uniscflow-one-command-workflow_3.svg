@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1280 720">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: #ffd166;
+      }
+
+      .st2, .st3, .st4, .st5, .st6, .st1, .st7, .st8, .st9, .st10, .st11, .st12 {
+        isolation: isolate;
+      }
+
+      .st2, .st3, .st8, .st10 {
+        font-family: ArialMT, Arial;
+      }
+
+      .st2, .st10 {
+        font-size: 15px;
+      }
+
+      .st2, .st13 {
+        fill: #9fbdb7;
+      }
+
+      .st14, .st8, .st10 {
+        fill: #cfeae4;
+      }
+
+      .st3 {
+        fill: #b9d9d2;
+        font-size: 18px;
+      }
+
+      .st15 {
+        fill: #2d1d22;
+        stroke: #ff6b6b;
+      }
+
+      .st15, .st16 {
+        stroke-opacity: .5;
+      }
+
+      .st15, .st16, .st17, .st18 {
+        stroke-width: 2px;
+      }
+
+      .st4 {
+        fill: #9ff0dc;
+      }
+
+      .st4, .st5, .st1, .st7, .st9 {
+        font-size: 20px;
+      }
+
+      .st4, .st5, .st1, .st7, .st9, .st11, .st12 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .st5 {
+        fill: #ff9b9b;
+      }
+
+      .st19 {
+        fill: #ff6b6b;
+      }
+
+      .st7 {
+        fill: #07141d;
+      }
+
+      .st8 {
+        font-size: 14px;
+      }
+
+      .st9, .st11, .st12 {
+        fill: #e8fff8;
+      }
+
+      .st16 {
+        fill: #2b2618;
+        stroke: #ffd166;
+      }
+
+      .st20 {
+        fill: #47d7ac;
+      }
+
+      .st17 {
+        fill: #0d2a31;
+        stroke: #47d7ac;
+      }
+
+      .st17, .st18 {
+        stroke-opacity: .4;
+      }
+
+      .st11 {
+        font-size: 22px;
+      }
+
+      .st21 {
+        fill: url(#_名称未設定グラデーション);
+      }
+
+      .st18 {
+        fill: #0b202a;
+        stroke: #66e3c4;
+      }
+
+      .st12 {
+        font-size: 27px;
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション" data-name="名称未設定グラデーション" x1="1025.1" y1="780.6" x2="1026.1" y2="779.6" gradientTransform="translate(-1262982 524599) scale(1232 -672)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07141d"/>
+      <stop offset=".6" stop-color="#0b2f37"/>
+      <stop offset="1" stop-color="#15241d"/>
+    </linearGradient>
+  </defs>
+  <path class="st21" d="M65.1,30.5h1133.8c17.2,0,31.1,14.3,31.1,32v608c0,17.7-13.9,32-31.1,32H65.1c-17.2,0-31.1-14.3-31.1-32V62.5c0-17.7,13.9-32,31.1-32Z"/>
+  <path class="st14" d="M0,0"/>
+  <path class="st13" d="M0,0"/>
+  <path class="st13" d="M0,0"/>
+  <path class="st13" d="M0,0"/>
+  <path class="st14" d="M0,0"/>
+  <path class="st20" d="M0,0"/>
+  <path class="st19" d="M0,0"/>
+  <g>
+    <g class="st6">
+      <g class="st6">
+        <text class="st12" transform="translate(56 77.8)"><tspan x="0" y="0">From public raw reads to reproducible, uniform outputs in one command</tspan></text>
+      </g>
+    </g>
+    <g class="st6">
+      <g class="st6">
+        <text class="st3" transform="translate(56 107.8)"><tspan x="0" y="0">UniScFlow resolves the sample and run metadata, infers the sequencing platform and read structure, and then performs mapping.</tspan></text>
+      </g>
+    </g>
+    <rect class="st18" x="56" y="131.8" width="1140" height="66" rx="18" ry="18"/>
+    <g class="st6">
+      <g class="st6">
+        <text class="st11" transform="translate(90 172.8)"><tspan x="0" y="0">&gt; uniscflow --mode all --ids PRJNA/GSE --platform auto --star-index REF --write-web-summary</tspan></text>
+      </g>
+    </g>
+    <g>
+      <rect class="st17" x="56" y="239.8" width="220" height="116" rx="18" ry="18"/>
+      <path class="st20" d="M98.3,254.4h78.8c9,0,16.3,7.3,16.3,16.3h0c0,9-7.3,16.3-16.3,16.3h-78.8c-9,0-16.3-7.3-16.3-16.3h0c0-9,7.3-16.3,16.3-16.3h0Z"/>
+      <g class="st6">
+        <g class="st6">
+          <text class="st7" transform="translate(106.5 277.5)"><tspan x="0" y="0">INPUT</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st4" transform="translate(82 310.8)"><tspan x="0" y="0">Public IDs</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st8" transform="translate(82 334.8)"><tspan x="0" y="0">PRJNA / GSE / GSM</tspan></text>
+        </g>
+      </g>
+    </g>
+    <path class="st20" d="M351,297.8"/>
+    <g>
+      <rect class="st17" x="361" y="229.8" width="250" height="136" rx="18" ry="18"/>
+      <g class="st6">
+        <g class="st6">
+          <text class="st9" transform="translate(388 265.8)"><tspan x="0" y="0">Metadata resolver</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(388 296.8)"><tspan x="0" y="0">ENA read_run filereport</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(388 322.8)"><tspan x="0" y="0">GEO SOFT sample fields</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st2" transform="translate(388 345.8)"><tspan x="0" y="0">sample/run relationships</tspan></text>
+        </g>
+      </g>
+    </g>
+    <path class="st20" d="M686,297.8"/>
+    <g>
+      <rect class="st17" x="696" y="229.8" width="236" height="136" rx="18" ry="18"/>
+      <g class="st6">
+        <g class="st6">
+          <text class="st9" transform="translate(717 264.8)"><tspan x="0" y="0">Raw read engine</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(717 295.8)"><tspan x="0" y="0">SRA download</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(717 321.8)"><tspan x="0" y="0">fasterq-dump</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st2" transform="translate(717 344.8)"><tspan x="0" y="0">include technical reads + gzip</tspan></text>
+        </g>
+      </g>
+    </g>
+    <path class="st0" d="M1011,297.8"/>
+    <g>
+      <path class="st17" d="M1031,229.8h153.9c11,0,19.9,8.1,19.9,18v100c0,9.9-8.9,18-19.9,18h-153.9c-11,0-19.9-8.1-19.9-18v-100c0-9.9,8.9-18,19.9-18h0Z"/>
+      <g class="st6">
+        <g class="st6">
+          <text class="st9" transform="translate(1032.8 264.8)"><tspan x="0" y="0">Inference</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(1032 292.8)"><tspan x="0" y="0">metadata + FASTQ</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(1032 318.8)"><tspan x="0" y="0">whitelist aware</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st2" transform="translate(1032 341.8)"><tspan x="0" y="0">platform and I1/I2/R1/R2</tspan></text>
+        </g>
+      </g>
+    </g>
+    <path class="st0" d="M1108,421.8"/>
+    <g>
+      <path class="st16" d="M506.4,444.8h330.5c12.4,0,22.4,8.1,22.4,18v96c0,9.9-10,18-22.4,18h-330.5c-12.4,0-22.4-8.1-22.4-18v-96c0-9.9,10-18,22.4-18h0Z"/>
+      <g class="st6">
+        <g class="st6">
+          <text class="st1" transform="translate(512.1 485.8)"><tspan x="0" y="0">Supported mapping path</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(512.1 517.8)"><tspan x="0" y="0">STARsolo: 10x, Drop-seq, Seq-Well, DNBelab C4</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(512.1 544.8)"><tspan x="0" y="0">STAR + featureCounts: Smart-seq2</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <rect class="st15" x="898.8" y="444.8" width="306" height="132" rx="18" ry="18"/>
+      <g class="st6">
+        <g class="st6">
+          <text class="st5" transform="translate(926.8 485.8)"><tspan x="0" y="0">Safe halt path</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(927.8 517.8)"><tspan x="0" y="0">BD Rhapsody, Parse, SPLiT-seq, etc..</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(926.8 544.8)"><tspan x="0" y="0">manifest or assay-specific logic needed</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g>
+      <rect class="st16" x="82" y="444.8" width="310" height="132" rx="18" ry="18"/>
+      <g class="st6">
+        <g class="st6">
+          <text class="st1" transform="translate(110 485.8)"><tspan x="0" y="0">Audit-ready outputs</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(110 517.8)"><tspan x="0" y="0">counts, BAM, web_summary.html</tspan></text>
+        </g>
+      </g>
+      <g class="st6">
+        <g class="st6">
+          <text class="st10" transform="translate(110 544.8)"><tspan x="0" y="0">manifests, logs, inference TSV/JSON</tspan></text>
+        </g>
+      </g>
+    </g>
+    <path class="st20" d="M341,387.7"/>
+    <path class="st19" d="M659,387.7"/>
+    <path class="st0" d="M1144,315.7"/>
+    <circle class="st20" cx="94" cy="619.8" r="6"/>
+    <g class="st6">
+      <g class="st6">
+        <text class="st3" transform="translate(111 625.8)"><tspan x="0" y="0">The default user experience is one `--mode all` command; subcommands are for inspection, debugging, and resuming.</tspan></text>
+      </g>
+    </g>
+    <polygon class="st20" points="319 304.5 295 304.5 295 291 319 291 319 281.8 351 297.8 319 313.8 319 304.5"/>
+    <polygon class="st20" points="654 304.5 630 304.5 630 291 654 291 654 281.8 686 297.8 654 313.8 654 304.5"/>
+    <polygon class="st20" points="969 304.5 945 304.5 945 291 969 291 969 281.8 1001 297.8 969 313.8 969 304.5"/>
+    <polygon class="st0" points="876.1 403.2 985.9 379.8 988.7 393.1 878.9 416.4 877.9 416.7 854.3 421.7 856.2 430.7 821.6 421.7 849.6 399.4 851.5 408.5 875 403.4 876.1 403.2"/>
+    <polygon class="st0" points="438.4 503.2 462.5 503.2 462.5 516.8 438.4 516.8 438.4 526 406.4 510 438.4 494 438.4 503.2"/>
+    <polygon class="st19" points="1121.3 404.4 1121.3 380.3 1134.8 380.3 1134.8 404.4 1144 404.4 1128 436.4 1112 404.4 1121.3 404.4"/>
+    <g class="st6">
+      <g class="st6">
+        <text class="st3" transform="translate(111.5 650.9)"><tspan x="0" y="0">UniScFlow defines 25 named platform profiles plus one explicitly configured generic droplet-UMI route whose geometry is never inferred.</tspan></text>
+      </g>
+      <g class="st6">
+        <text class="st3" transform="translate(111.5 672.5)"><tspan x="0" y="0" xml:space="preserve">It distinguishes datasets that can proceed directly to mapping (   ) from those needing vendor- or experiment-specific information (   ). </tspan></text>
+      </g>
+    </g>
+    <circle class="st0" cx="77.2" cy="644.9" r="6"/>
+    <circle class="st19" cx="94" cy="644.9" r="6"/>
+    <circle class="st0" cx="199.4" cy="668" r="6"/>
+    <circle class="st19" cx="924.3" cy="668" r="6"/>
+  </g>
+</svg>

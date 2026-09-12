@@ -1,0 +1,40 @@
+{
+  "name": "scrbseq",
+  "family": "plate_umi",
+  "description": "SCRB-seq or mcSCRB-seq data.",
+  "cell_barcode_read": "R1",
+  "umi_read": "R1",
+  "cdna_read": "R2",
+  "whitelist_policy": "sample_or_plate_manifest",
+  "supported_targets": [
+    "manual_review",
+    "starsolo"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "zumis",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "SCRB-seq/mcSCRB-seq needs a plate/well barcode manifest and protocol-specific barcode/UMI positions before cell-level quantification.",
+    "required_inputs": [
+      "Well barcode list and well-to-sample mapping",
+      "Confirmed protocol variant, barcode/UMI coordinates, cDNA read, and strandedness"
+    ],
+    "next_steps": [
+      "Identify the SCRB-seq protocol variant and recover its well barcode manifest.",
+      "Check read orientation and barcode/UMI positions against representative FASTQs.",
+      "Run zUMIs or an explicitly configured STARsolo workflow and verify expected well recovery."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "zUMIs",
+        "url": "https://github.com/sdparekh/zUMIs",
+        "role": "Protocol-configurable UMI parsing and gene counting"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "After the well manifest and geometry are verified, an explicit SCRB-seq STARsolo target can be prepared."
+  }
+}
