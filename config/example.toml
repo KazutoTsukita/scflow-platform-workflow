@@ -1,0 +1,96 @@
+# Example configuration for platform-aware public scRNA-seq reprocessing.
+# Copy this file, edit the values, then run:
+#   ./bin/uniscflow --mode check --config config/my_project.toml
+#   ./bin/uniscflow --mode download --config config/my_project.toml
+#   ./bin/uniscflow --mode mapping --config config/my_project.toml
+
+[project]
+# BioProject numeric part. PRJNA804521 should be written as "804521".
+ids = ["804521"]
+
+# Optional ENA filereport filters. Leave this section empty to process every sample
+# in the project. Accession fields use case-insensitive exact matching; free-text
+# fields use case-insensitive fixed-string matching. Separate keys are combined
+# with AND, while comma-separated values within one key are combined with OR:
+#   sample_alias = "GSM1,GSM2"
+[project.filters]
+
+[paths]
+# The new workflow uses copied scripts under this directory by default.
+# Keep this as "tools/legacy" unless you intentionally replace the bundled copies.
+codedir = "tools/legacy"
+filereport_dir = "work/filereport"
+download_script_outputdir = "work/download_script"
+temporary_sra_download_dir = "work/SRR_download_temporary"
+final_file_dir = "work/raw"
+
+[download]
+max_workers = 2
+parallel = 2
+# Platform inference. Use "auto" to reconcile metadata and FASTQ evidence.
+# If both agree, UniScFlow proceeds. If they conflict, mapping stops unless
+# force_platform is set explicitly.
+platform = "auto"
+# Submitted BAM/alignment-derived records are detected and rescued by default.
+# Set this to false only if you intentionally want ordinary SRA/fasterq handling.
+resolve_bam = true
+# force_platform = "10x"
+# Set only when your network requires an FTP proxy.
+# ftp_proxy = "proxy.example.ac.jp:8080/"
+
+[metadata]
+# UniScFlow samples the first 3 unique GSM accessions from the ENA filereport,
+# caches GEO SOFT records, and uses Series/Sample metadata for platform inference.
+geo_soft_max_samples = 3
+# geo_soft_dir = "work/filereport/geo_soft"
+
+[read_structure]
+# fasterq-dump output suffixes. For many 10x public SRA datasets:
+#   index1=1, read1=2, read2=3
+index1 = "1"
+index2 = "NULL"
+read1 = "2"
+read2 = "3"
+# With download.platform = "generic_droplet_umi", all seven values below are
+# required and are never inferred automatically. Coordinates are one-based.
+# generic_cell_barcode_read = "R1"
+# generic_cell_barcode_start = 1
+# generic_cell_barcode_length = 12
+# generic_umi_read = "R1"
+# generic_umi_start = 13
+# generic_umi_length = 8
+# generic_cdna_read = "R2"
+
+[mapping]
+# STARsolo is the default mapping engine. Cell Ranger remains optional legacy support.
+engine = "starsolo"
+enabled = true
+localcores = 8
+localmem = 128
+parallel = 1
+# Strict by default: any failed sample mapper makes the project command fail.
+# Set true only for exploratory screening, never for final matrices.
+allow_partial_success = false
+
+# Cell Ranger-only settings, used only with engine = "cellranger".
+# container = "cellranger_container"
+# transcriptome = "/home/yard/ref/refdata-gex-mm10-2020-A"
+# dir_in_container = "/home/yard/raw"
+# file_dir_in_host = "work/raw"
+# dir_in_host = "work/cellranger_work"
+# download_source = "SRR"
+# no_bam = true
+# include_introns = "true"
+# allow_partial_success = false
+
+[prepare]
+target = "auto"
+mapper_output_dir = "work/mapper_ready"
+profiles_dir = "profiles/platforms"
+threads = 8
+# STAR-based mapping requires both an index and the matching GTF.
+# star_index = "/path/to/star_index"
+# genome_fasta = "/path/to/genome.fa"
+# genes_gtf = "/path/to/genes.gtf"
+# sjdb_overhang = 99
+# salmon_index = "/path/to/salmon_index"

@@ -1,0 +1,38 @@
+.git
+.gitignore
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local validation and user-specific data should never be baked into images.
+data/
+work/
+validation/
+manuscript/
+SRR_download_temporary/
+cellranger_download/
+*.bak*
+
+# Runtime outputs and large sequencing/alignment files.
+*.log
+*.nohup.log
+*.sra
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bai
+
+# Local environment/build artifacts.
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/

@@ -1,0 +1,46 @@
+{
+  "title": "UniScFlow: public-accession reconstruction and guarded remapping of single-cell RNA-seq raw data",
+  "description": "UniScFlow reconstructs selected public scRNA-seq and snRNA-seq deposits from repository metadata and raw-file evidence, prepares auditable mapper inputs, and routes each project to a supported STAR-based mapping workflow or an explicit machine-readable stop.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "bsd-3-clause",
+  "version": "1.0.0",
+  "publication_date": "2026-09-03",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/KazutoTsukita/scflow-platform-workflow",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Tsukita, Kazuto",
+      "affiliation": "Kyoto University; Teikyo University"
+    },
+    {
+      "name": "Kikuya, Akihiro",
+      "affiliation": "Kyoto University"
+    },
+    {
+      "name": "Yamakado, Hodaka",
+      "affiliation": "Kyoto University"
+    },
+    {
+      "name": "Maki, Takakuni",
+      "affiliation": "Kyoto University"
+    },
+    {
+      "name": "Matsumoto, Riki",
+      "affiliation": "Kyoto University"
+    }
+  ],
+  "keywords": [
+    "single-cell RNA sequencing",
+    "single-nucleus RNA sequencing",
+    "public data reuse",
+    "workflow",
+    "STARsolo",
+    "reproducibility"
+  ]
+}

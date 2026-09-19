@@ -1,0 +1,40 @@
+{
+  "name": "ramda_seq",
+  "display_name": "RamDA-seq",
+  "family": "plate_full_length",
+  "description": "RamDA-seq full-length single-cell RNA-seq. Public submissions can be plate-like and require sample/well review before automatic biological-sample grouping.",
+  "cell_barcode_read": "none",
+  "umi_read": "none",
+  "cell_identity": "sample_or_manifest",
+  "whitelist_policy": "none",
+  "supported_targets": [
+    "manual_review",
+    "star_featurecounts"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "notes": "UniScFlow recognizes RamDA-seq and routes it to download plus documented halt by default. Mapping can be resumed after confirming the sample or well structure.",
+  "external_targets": [
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "RamDA-seq public deposits are commonly plate/well organized and require explicit cell/well grouping, read-layout, and strandedness review before count generation.",
+    "required_inputs": [
+      "Cell/well-to-sample manifest",
+      "Confirmed paired/single-end layout, strandedness, and RamDA-seq protocol variant"
+    ],
+    "next_steps": [
+      "Recover the plate/well map and establish whether each GSM/run represents a cell or a biological sample.",
+      "Confirm read pairing and strandedness from methods and representative FASTQs.",
+      "Prepare the explicit STAR-featureCounts target and verify expected cell/well columns and genomic coverage."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "UniScFlow STAR-featureCounts target",
+        "role": "Full-length RamDA-seq after explicit well-map and strandedness review"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "Rerun with an explicit RamDA-seq STAR-featureCounts target only after the plate map and read-layout assumptions are documented."
+  }
+}

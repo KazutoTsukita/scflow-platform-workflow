@@ -1,0 +1,45 @@
+{
+  "name": "icell8",
+  "display_name": "ICELL8",
+  "family": "plate_full_length",
+  "description": "Takara/ICELL8 plate-like full-length single-cell RNA-seq. Public records can require chip/well or sample-manifest interpretation before automatic mapping.",
+  "cell_barcode_read": "none",
+  "umi_read": "none",
+  "cell_identity": "sample_or_manifest",
+  "whitelist_policy": "none",
+  "supported_targets": [
+    "manual_review",
+    "star_featurecounts"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "notes": "UniScFlow detects ICELL8 metadata and full-length FASTQ layouts, but intentionally stops after download until sample/well identity has been reviewed.",
+  "external_targets": [
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "ICELL8 is an open platform whose chip/well selection and library design can be full-length, UMI-based, or custom; the valid-well map and application must be reviewed.",
+    "required_inputs": [
+      "CellSelect/valid-well export or equivalent chip/well manifest",
+      "ICELL8 application/protocol, barcode/UMI status, read pairing, and strandedness"
+    ],
+    "next_steps": [
+      "Recover the valid-well/chip map and determine how wells map to GSMs and biological samples.",
+      "Confirm whether the library is full-length non-UMI or requires custom barcode/UMI parsing.",
+      "For confirmed full-length inputs, prepare the explicit STAR-featureCounts target; otherwise use the application-specific analysis workflow."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "ICELL8 CellSelect and application documentation",
+        "url": "https://catalog.takara-bio.co.jp/com/manual_info.php?unitid=U100009346",
+        "role": "Valid-well selection and protocol-specific interpretation"
+      },
+      {
+        "name": "UniScFlow STAR-featureCounts target",
+        "role": "Full-length non-UMI libraries after explicit well-map review"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "Use the explicit STAR-featureCounts target only for validated full-length non-UMI ICELL8 inputs with a resolved valid-well map."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "marsseq",
+  "family": "plate_umi",
+  "description": "MARS-seq plate-based UMI data.",
+  "cell_barcode_read": "R1",
+  "umi_read": "R1",
+  "cdna_read": "R2",
+  "whitelist_policy": "plate_manifest",
+  "supported_targets": [
+    "manual_review",
+    "starsolo"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "zumis",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "MARS-seq requires the experiment-specific plate barcode set, well/sample map, and confirmed barcode/UMI geometry.",
+    "required_inputs": [
+      "Plate/well barcode list and well-to-sample manifest",
+      "Confirmed barcode, UMI, and cDNA read coordinates plus strandedness"
+    ],
+    "next_steps": [
+      "Obtain the barcode list and plate map from the study supplements or authors.",
+      "Validate barcode orientation and read roles against representative FASTQs.",
+      "Run zUMIs or an explicitly configured STARsolo workflow and confirm recovery of expected wells."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "zUMIs",
+        "url": "https://github.com/sdparekh/zUMIs",
+        "role": "Configurable plate-barcode/UMI parsing and quantification"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "After supplying and validating the plate manifest and exact geometry, an explicit MARS-seq STARsolo target can be prepared."
+  }
+}

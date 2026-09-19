@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GSM8146611 web summary</title>
+<style>
+:root {
+  --ink: #1d2836;
+  --muted: #667487;
+  --line: #d9e0e8;
+  --panel: #ffffff;
+  --bg: #f5f7fa;
+  --accent: #2266aa;
+  --accent-soft: #e7f0f9;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+header {
+  background: #27384a;
+  color: white;
+  padding: 28px 36px;
+}
+header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 650;
+}
+header .meta {
+  color: #dce6ef;
+  font-size: 14px;
+}
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 26px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+.metric, section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(22, 34, 51, 0.04);
+}
+.metric {
+  padding: 16px;
+}
+.metric-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+.metric-value {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+.metric-sub {
+  color: var(--muted);
+  font-size: 12px;
+  min-height: 16px;
+}
+section {
+  margin-top: 18px;
+  padding: 20px;
+}
+h2 {
+  margin: 0 0 14px;
+  font-size: 18px;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 18px;
+}
+.plot {
+  width: 100%;
+  max-width: 760px;
+  display: block;
+}
+.grid line {
+  stroke: #e6ebf0;
+  stroke-width: 1;
+}
+.axis {
+  stroke: #9aa8b6;
+  stroke-width: 1.2;
+}
+.tick {
+  fill: var(--muted);
+  font-size: 11px;
+}
+.axis-title {
+  fill: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+}
+.rank-cell {
+  stroke: #2266aa;
+  stroke-width: 2.8;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.rank-bg {
+  stroke: #a8b1bd;
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.rank-cell-dot {
+  fill: #2266aa;
+}
+.rank-bg-dot {
+  fill: #a8b1bd;
+}
+.cutoff-line {
+  stroke: #d34b38;
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+.cutoff-label {
+  fill: #9d3328;
+  font-size: 12px;
+  font-weight: 650;
+}
+.legend text {
+  fill: var(--muted);
+  font-size: 11px;
+}
+.bars rect {
+  fill: var(--accent);
+}
+.axis-label {
+  fill: var(--ink);
+  font-size: 13px;
+}
+.bar-label {
+  fill: var(--muted);
+  font-size: 13px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th, td {
+  border-top: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  width: 42%;
+  color: var(--muted);
+  font-weight: 600;
+}
+code {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #eef2f6;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 12px;
+}
+.empty {
+  color: var(--muted);
+  background: var(--accent-soft);
+  border-radius: 5px;
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>GSM8146611 web summary</h1>
+  <div class="meta">Project PRJNA1087433 · platform 10x · mapper STARsolo 2.7.10b · generated 2026-05-15 14:41:55</div>
+</header>
+<main>
+  <div class="metrics">
+<div class="metric">
+  <div class="metric-label">Estimated cells</div>
+  <div class="metric-value">1,476</div>
+  <div class="metric-sub">STARsolo cell calling</div>
+</div>
+
+<div class="metric">
+  <div class="metric-label">Median genes / cell</div>
+  <div class="metric-value">1,677</div>
+  <div class="metric-sub">filtered matrix</div>
+</div>
+
+<div class="metric">
+  <div class="metric-label">Median UMIs / cell</div>
+  <div class="metric-value">3,859</div>
+  <div class="metric-sub">filtered matrix</div>
+</div>
+
+<div class="metric">
+  <div class="metric-label">Reads</div>
+  <div class="metric-value">12,199,993</div>
+  <div class="metric-sub">input read pairs/records</div>
+</div>
+
+<div class="metric">
+  <div class="metric-label">Unique genome mapping</div>
+  <div class="metric-value">72.7%</div>
+  <div class="metric-sub">STAR Log.final.out</div>
+</div>
+
+<div class="metric">
+  <div class="metric-label">Unique gene mapping</div>
+  <div class="metric-value">61.5%</div>
+  <div class="metric-sub">STARsolo Summary.csv</div>
+</div>
+
+<div class="metric">
+  <div class="metric-label">Sequencing saturation</div>
+  <div class="metric-value">9.4%</div>
+  <div class="metric-sub">STARsolo estimate</div>
+</div>
+
+<div class="metric">
+  <div class="metric-label">Genes detected</div>
+  <div class="metric-value">14,590</div>
+  <div class="metric-sub">filtered matrix</div>
+</div>
+</div>
+  <div class="grid2">
+    <section>
+      <h2>Barcode Rank</h2>
+      
+<svg class="plot" viewBox="0 0 720 330" role="img" aria-label="Barcode rank plot">
+  <g class="grid"><line x1="72.0" y1="18" x2="72.0" y2="272" /><line x1="189.4" y1="18" x2="189.4" y2="272" /><line x1="306.8" y1="18" x2="306.8" y2="272" /><line x1="424.3" y1="18" x2="424.3" y2="272" /><line x1="541.7" y1="18" x2="541.7" y2="272" /><line x1="659.1" y1="18" x2="659.1" y2="272" /><line x1="72" y1="272.0" x2="696" y2="272.0" /><line x1="72" y1="211.4" x2="696" y2="211.4" /><line x1="72" y1="150.7" x2="696" y2="150.7" /><line x1="72" y1="90.1" x2="696" y2="90.1" /><line x1="72" y1="29.4" x2="696" y2="29.4" /></g>
+  <line class="axis" x1="72" y1="272" x2="696" y2="272" />
+  <line class="axis" x1="72" y1="18" x2="72" y2="272" />
+  <text class="tick" x="72.0" y="292" text-anchor="middle">1</text><text class="tick" x="189.4" y="292" text-anchor="middle">10</text><text class="tick" x="306.8" y="292" text-anchor="middle">100</text><text class="tick" x="424.3" y="292" text-anchor="middle">1k</text><text class="tick" x="541.7" y="292" text-anchor="middle">10k</text><text class="tick" x="659.1" y="292" text-anchor="middle">100k</text><text class="tick" x="62" y="276.0" text-anchor="end">1</text><text class="tick" x="62" y="215.4" text-anchor="end">10</text><text class="tick" x="62" y="154.7" text-anchor="end">100</text><text class="tick" x="62" y="94.1" text-anchor="end">1k</text><text class="tick" x="62" y="33.4" text-anchor="end">10k</text>
+  <line class="cutoff-line" x1="444.1" y1="18" x2="444.1" y2="272" /><text class="cutoff-label" x="452.1" y="34">estimated cells: 1,476 (875 UMIs)</text>
+  <polyline class="rank-bg" points="444.1,93.6 444.3,96.0 445.1,108.7 446.0,115.2 446.9,124.9 447.8,129.5 448.7,134.1 449.6,138.8 450.5,142.4 451.4,147.5 452.3,151.0 453.2,155.3 454.1,160.1 455.0,164.2 455.9,169.5 456.8,173.6 457.7,174.9 458.6,177.6 459.4,179.1 460.3,179.9 461.2,181.6 462.1,182.4 463.0,182.4 463.9,183.3 464.8,184.2 465.7,185.2 466.6,185.2 467.5,186.2 468.4,186.2 469.2,186.2 470.1,187.2 471.0,187.2 471.9,188.3 472.8,188.3 473.7,189.4 474.6,189.4 475.5,189.4 476.4,190.6 477.3,190.6 478.2,190.6 479.1,191.8 480.0,191.8 480.9,191.8 481.8,193.1 482.6,193.1 483.5,193.1 484.4,193.1 485.3,193.1 486.2,194.5 487.1,194.5 488.0,194.5 488.9,194.5 489.8,195.9 490.7,195.9 491.6,195.9 492.5,195.9 493.4,197.4 494.2,197.4 495.1,197.4 496.0,197.4 496.9,197.4 497.8,197.4 498.7,199.0 499.6,199.0 500.5,199.0 501.4,199.0 502.3,199.0 503.2,199.0 504.1,200.7 505.0,200.7 505.9,200.7 506.8,200.7 507.6,200.7 508.5,200.7 509.4,202.5 510.3,202.5 511.2,202.5 512.1,202.5 513.0,202.5 513.9,202.5 514.8,202.5 515.7,202.5 516.6,204.5 517.5,204.5 518.4,204.5 519.2,204.5 520.1,204.5 521.0,204.5 521.9,204.5 522.8,204.5 523.7,204.5 524.6,206.6 525.5,206.6 526.4,206.6 527.3,206.6 528.2,206.6 529.1,206.6 530.0,206.6 530.8,206.6 531.7,206.6 532.6,206.6 533.5,208.9 534.4,208.9 535.3,208.9 536.2,208.9 537.1,208.9 538.0,208.9 538.9,208.9 539.8,208.9 540.7,208.9 541.6,208.9 542.5,208.9 543.3,208.9 544.2,208.9 545.1,211.4 546.0,211.4 546.9,211.4 547.8,211.4 548.7,211.4 549.6,211.4 550.5,211.4 551.4,211.4 552.3,211.4 553.2,211.4 554.1,211.4 555.0,211.4 555.8,211.4 556.7,211.4 557.6,214.1 558.5,214.1 559.4,214.1 560.3,214.1 561.2,214.1 562.1,214.1 563.0,214.1 563.9,214.1 564.8,214.1 565.7,214.1 566.6,214.1 567.4,214.1 568.3,214.1 569.2,214.1 570.1,214.1 571.0,217.2 571.9,217.2 572.8,217.2 573.7,217.2 574.6,217.2 575.5,217.2 576.4,217.2 577.3,217.2 578.2,217.2 579.1,217.2 579.9,217.2 580.8,217.2 581.7,217.2 582.6,217.2 583.5,217.2 584.4,217.2 585.3,220.8 586.2,220.8 587.1,220.8 588.0,220.8 588.9,220.8 589.8,220.8 590.7,220.8 591.6,220.8 592.4,220.8 593.3,220.8 594.2,220.8 595.1,220.8 596.0,220.8 596.9,220.8 597.8,220.8 598.7,220.8 599.6,224.8 600.5,224.8 601.4,224.8 602.3,224.8 603.2,224.8 604.1,224.8 604.9,224.8 605.8,224.8 606.7,224.8 607.6,224.8 608.5,224.8 609.4,224.8 610.3,224.8 611.2,224.8 612.1,224.8 613.0,229.6 613.9,229.6 614.8,229.6 615.7,229.6 616.5,229.6 617.4,229.6 618.3,229.6 619.2,229.6 620.1,229.6 621.0,229.6 621.9,229.6 622.8,229.6 623.7,229.6 624.6,235.5 625.5,235.5 626.4,235.5 627.3,235.5 628.2,235.5 629.0,235.5 629.9,235.5 630.8,235.5 631.7,235.5 632.6,235.5 633.5,243.1 634.4,243.1 635.3,243.1 636.2,243.1 637.1,243.1 638.0,243.1 638.9,243.1 639.8,243.1 640.7,253.7 641.5,253.7 642.4,253.7 643.3,253.7 644.2,253.7 645.1,253.7 646.0,253.7 646.9,253.7 647.8,253.7 648.7,272.0 649.6,272.0 650.5,272.0 651.4,272.0 652.3,272.0 653.2,272.0 654.0,272.0 654.9,272.0 655.8,272.0 656.7,272.0 657.6,272.0 658.5,272.0 659.4,272.0 660.3,272.0 661.2,272.0 662.1,272.0 663.0,272.0 663.9,272.0 664.8,272.0 665.6,272.0 666.5,272.0 667.4,272.0 668.3,272.0 669.2,272.0 670.1,272.0 671.0,272.0 671.9,272.0 672.8,272.0 673.7,272.0 674.6,272.0 675.5,272.0 676.4,272.0 677.3,272.0 678.1,272.0 679.0,272.0 679.9,272.0 680.8,272.0 681.7,272.0 682.6,272.0 683.5,272.0 684.4,272.0 685.3,272.0 686.2,272.0 687.1,272.0 688.0,272.0 688.9,272.0 689.8,272.0 690.6,272.0 691.5,272.0 692.4,272.0 693.3,272.0 694.2,272.0 695.1,272.0 696.0,272.0" fill="none" />
+  <polyline class="rank-cell" points="72.0,18.0 107.3,18.8 128.0,25.1 142.7,27.4 154.1,27.5 163.4,27.6 171.2,28.2 178.0,28.2 184.0,28.7 189.4,28.8 194.3,29.5 198.7,29.7 202.8,29.7 206.6,29.8 210.1,29.9 213.4,30.1 216.5,30.4 219.4,30.6 222.2,31.0 224.8,31.0 227.3,31.7 229.6,31.9 231.9,32.3 234.1,32.5 236.1,32.7 238.1,33.0 240.1,33.0 241.9,33.2 243.7,33.2 245.4,33.3 247.1,33.4 248.7,33.4 250.3,33.4 251.8,33.6 253.3,33.6 254.7,33.8 256.1,34.0 257.5,34.1 258.8,34.3 260.1,34.3 261.4,34.3 262.6,34.6 263.8,34.7 265.0,34.9 266.1,34.9 267.2,34.9 268.3,35.0 269.4,35.2 270.5,35.3 271.5,35.3 272.5,35.4 273.5,35.5 274.5,35.6 275.4,35.6 276.4,35.6 277.3,35.6 278.2,35.7 279.1,35.9 279.9,36.0 280.8,36.0 281.6,36.2 282.5,36.2 283.3,36.2 284.1,36.2 285.7,36.4 286.4,36.5 287.2,36.7 287.9,36.8 288.7,36.9 290.1,37.0 290.8,37.0 291.5,37.1 292.2,37.1 293.5,37.2 294.2,37.3 295.5,37.4 296.1,37.7 296.7,37.7 297.9,37.7 298.6,37.8 299.7,37.9 300.3,38.0 301.5,38.0 302.6,38.0 303.1,38.1 304.2,38.1 304.8,38.2 305.8,38.3 306.8,38.4 307.9,38.5 308.3,38.7 309.3,38.7 310.3,38.8 311.2,38.8 312.2,38.9 313.1,38.9 314.0,39.0 314.8,39.0 315.7,39.1 316.6,39.3 317.4,39.5 318.2,39.5 319.4,39.6 320.2,39.7 321.0,40.0 322.1,40.2 322.9,40.3 323.6,40.4 324.7,40.6 325.4,40.7 326.5,40.8 327.2,41.0 328.2,41.3 329.2,41.3 329.8,41.4 330.8,41.5 331.8,41.6 332.7,41.7 333.6,42.0 334.5,42.2 335.4,42.3 336.2,42.4 337.1,42.6 337.9,42.7 339.0,42.8 339.8,42.9 340.6,42.9 341.7,43.1 342.4,43.3 343.4,43.6 344.2,43.6 345.2,43.7 346.1,43.8 347.0,44.0 347.7,44.1 348.6,44.3 349.5,44.4 350.6,44.5 351.5,44.6 352.3,44.8 353.2,44.9 354.2,45.2 355.0,45.2 356.0,45.3 356.7,45.5 357.7,45.6 358.6,45.9 359.5,46.0 360.4,46.0 361.3,46.2 362.2,46.3 363.0,46.4 363.9,46.5 364.9,46.7 365.7,46.8 366.6,47.0 367.4,47.1 368.3,47.2 369.2,47.3 370.1,47.3 371.0,47.5 371.9,47.7 372.9,47.9 373.7,48.0 374.6,48.2 375.5,48.3 376.4,48.4 377.3,48.5 378.2,48.8 379.0,49.0 380.0,49.1 380.9,49.3 381.8,49.5 382.6,49.6 383.5,49.8 384.4,50.0 385.3,50.1 386.2,50.3 387.1,50.4 388.0,50.5 388.9,50.6 389.8,50.8 390.7,50.9 391.6,51.0 392.5,51.2 393.4,51.4 394.2,51.6 395.1,51.7 396.0,51.9 396.9,52.0 397.9,52.1 398.7,52.3 399.6,52.6 400.5,52.7 401.4,52.8 402.3,53.1 403.2,53.3 404.1,53.4 405.0,53.7 405.9,53.8 406.8,54.0 407.7,54.2 408.6,54.5 409.5,54.7 410.3,54.8 411.2,55.1 412.1,55.3 413.0,55.5 413.9,55.7 414.8,56.0 415.7,56.2 416.6,56.5 417.5,56.7 418.4,57.0 419.3,57.4 420.2,57.6 421.1,57.9 422.0,58.2 422.8,58.4 423.7,58.7 424.6,59.2 425.5,59.5 426.4,60.0 427.3,60.5 428.2,60.9 429.1,61.4 430.0,61.9 430.9,62.2 431.7,62.7 432.7,63.2 433.6,63.8 434.4,64.6 435.3,65.3 436.2,65.8 437.1,66.7 438.0,67.5 438.9,69.0 439.8,70.9 440.7,72.5 441.6,74.6 442.5,80.3 443.3,86.7 444.1,93.6" fill="none" />
+  <g class="legend">
+    <circle cx="80" cy="32" r="5" class="rank-cell-dot" />
+    <text x="92" y="36">cell-associated barcodes</text>
+    <circle cx="262" cy="32" r="5" class="rank-bg-dot" />
+    <text x="274" y="36">background barcodes</text>
+  </g>
+  <text class="axis-title" x="384.0" y="320" text-anchor="middle">Barcode rank (log10)</text>
+  <text class="axis-title" x="18" y="145.0" transform="rotate(-90 18 145.0)" text-anchor="middle">UMIs (log10)</text>
+</svg>
+
+    </section>
+    <section>
+      <h2>Mapping Rates</h2>
+      <svg class="plot bars" viewBox="0 0 680 230" role="img" aria-label="Alignment rates"><text x="12" y="45" class="axis-label">Unique genome</text><rect x="190" y="28" width="319.8" height="24" rx="3" /><text x="517.8" y="45" class="bar-label">72.7%</text><text x="12" y="83" class="axis-label">Unique + multi genome</text><rect x="190" y="66" width="380.4" height="24" rx="3" /><text x="578.4" y="83" class="bar-label">86.5%</text><text x="12" y="121" class="axis-label">Unique gene</text><rect x="190" y="104" width="270.6" height="24" rx="3" /><text x="468.6" y="121" class="bar-label">61.5%</text><text x="12" y="159" class="axis-label">Valid barcodes</text><rect x="190" y="142" width="427.7" height="24" rx="3" /><text x="625.7" y="159" class="bar-label">97.2%</text><text x="12" y="197" class="axis-label">RNA Q30</text><rect x="190" y="180" width="414.6" height="24" rx="3" /><text x="612.6" y="197" class="bar-label">94.2%</text></svg>
+    </section>
+  </div>
+  <section>
+    <h2>STARsolo Summary</h2>
+    <table><tr><th>Estimated Number of Cells</th><td>1476</td></tr>
+<tr><th>Fraction of Unique Reads in Cells</th><td>0.898267</td></tr>
+<tr><th>Mean Gene per Cell</th><td>1719</td></tr>
+<tr><th>Mean Reads per Cell</th><td>4565</td></tr>
+<tr><th>Mean UMI per Cell</th><td>4129</td></tr>
+<tr><th>Median Gene per Cell</th><td>1677</td></tr>
+<tr><th>Median Reads per Cell</th><td>4263</td></tr>
+<tr><th>Median UMI per Cell</th><td>3859</td></tr>
+<tr><th>Number of Reads</th><td>12199993</td></tr>
+<tr><th>Q30 Bases in CB+UMI</th><td>0.952532</td></tr>
+<tr><th>Q30 Bases in RNA read</th><td>0.942377</td></tr>
+<tr><th>Reads Mapped to Gene: Unique Gene</th><td>0.614915</td></tr>
+<tr><th>Reads Mapped to Gene: Unique+Multiple Gene</th><td>NoMulti</td></tr>
+<tr><th>Reads Mapped to Genome: Unique</th><td>0.726822</td></tr>
+<tr><th>Reads Mapped to Genome: Unique+Multiple</th><td>0.864621</td></tr>
+<tr><th>Reads With Valid Barcodes</th><td>0.971978</td></tr>
+<tr><th>Sequencing Saturation</th><td>0.0944871</td></tr>
+<tr><th>Total Gene Detected</th><td>14590</td></tr>
+<tr><th>UMIs in Cells</th><td>6095494</td></tr>
+<tr><th>Unique Reads in Cells Mapped to Gene</th><td>6738768</td></tr></table>
+  </section>
+  <section>
+    <h2>STAR Alignment Summary</h2>
+    <table><tr><th>% of chimeric reads</th><td>0.00%</td></tr>
+<tr><th>% of reads mapped to multiple loci</th><td>13.78%</td></tr>
+<tr><th>% of reads mapped to too many loci</th><td>1.38%</td></tr>
+<tr><th>% of reads unmapped: other</th><td>0.15%</td></tr>
+<tr><th>% of reads unmapped: too many mismatches</th><td>0.00%</td></tr>
+<tr><th>% of reads unmapped: too short</th><td>12.01%</td></tr>
+<tr><th>Average input read length</th><td>90</td></tr>
+<tr><th>Average mapped length</th><td>81.39</td></tr>
+<tr><th>Deletion average length</th><td>1.48</td></tr>
+<tr><th>Deletion rate per base</th><td>0.01%</td></tr>
+<tr><th>Finished on</th><td>May 15 14:41:41</td></tr>
+<tr><th>Insertion average length</th><td>1.27</td></tr>
+<tr><th>Insertion rate per base</th><td>0.01%</td></tr>
+<tr><th>Mapping speed, Million of reads per hour</th><td>610.00</td></tr>
+<tr><th>Mismatch rate per base, %</th><td>0.29%</td></tr>
+<tr><th>Number of chimeric reads</th><td>0</td></tr>
+<tr><th>Number of input reads</th><td>12199993</td></tr>
+<tr><th>Number of reads mapped to multiple loci</th><td>1681147</td></tr>
+<tr><th>Number of reads mapped to too many loci</th><td>168591</td></tr>
+<tr><th>Number of reads unmapped: other</th><td>18298</td></tr>
+<tr><th>Number of reads unmapped: too many mismatches</th><td>0</td></tr>
+<tr><th>Number of reads unmapped: too short</th><td>1464729</td></tr>
+<tr><th>Number of splices: AT/AC</th><td>428</td></tr>
+<tr><th>Number of splices: Annotated (sjdb)</th><td>1051187</td></tr>
+<tr><th>Number of splices: GC/AG</th><td>11447</td></tr>
+<tr><th>Number of splices: GT/AG</th><td>1055377</td></tr>
+<tr><th>Number of splices: Non-canonical</th><td>14098</td></tr>
+<tr><th>Number of splices: Total</th><td>1081350</td></tr>
+<tr><th>Started job on</th><td>May 15 14:40:09</td></tr>
+<tr><th>Started mapping on</th><td>May 15 14:40:29</td></tr>
+<tr><th>Uniquely mapped reads %</th><td>72.68%</td></tr>
+<tr><th>Uniquely mapped reads number</th><td>8867228</td></tr></table>
+  </section>
+  <section>
+    <h2>Matrix Files</h2>
+    <table>
+      <tr><th>Filtered cells</th><td>1,476</td></tr>
+      <tr><th>Filtered nonzero entries</th><td>2,538,286</td></tr>
+      <tr><th>Filtered total UMIs</th><td>6,095,494</td></tr>
+      <tr><th>Raw barcodes</th><td>3,686,400</td></tr>
+      <tr><th>Raw nonzero entries</th><td>3,179,561</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2>Command</h2>
+    <table>
+      <tr><th>Genome index</th><td>/path/to/star_index</td></tr>
+      <tr><th>soloType</th><td>CB_UMI_Simple</td></tr>
+      <tr><th>CB length</th><td>16</td></tr>
+      <tr><th>UMI length</th><td>12</td></tr>
+      <tr><th>Whitelist</th><td>/path/to/10x_whitelist/3M-february-2018_TRU.txt</td></tr>
+    </table>
+    <code>STAR --runThreadN 30 --genomeDir /path/to/star_index --readFilesIn &lt;(gzip -cd /path/to/raw/prjna1087433/GSM8146611/GSM8146611_S1_L001_R2_001.fastq.gz) &lt;(gzip -cd /path/to/raw/prjna1087433/GSM8146611/GSM8146611_S1_L001_R1_001.fastq.gz) --soloType CB_UMI_Simple --soloCBstart 1 --soloCBlen 16 --soloUMIstart 17 --soloUMIlen 12 --soloCBwhitelist /path/to/10x_whitelist/3M-february-2018_TRU.txt --soloBarcodeReadLength 29 --soloFeatures Gene --outSAMtype BAM SortedByCoordinate --outSAMattributes CR UR CY UY CB UB --outFileNamePrefix /path/to/mapper/prjna1087433/GSM8146611/mapper_inputs/starsolo/starsolo_out/</code>
+  </section>
+</main>
+</body>
+</html>

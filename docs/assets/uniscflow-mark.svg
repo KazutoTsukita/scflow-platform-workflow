@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">UniScFlow mark</title>
+  <desc id="desc">A standalone compass and barcode mark for the UniScFlow command-line workflow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#081823"/>
+      <stop offset="0.55" stop-color="#0b2f37"/>
+      <stop offset="1" stop-color="#14221d"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#47d7ac"/>
+      <stop offset="0.52" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020609" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <rect x="28" y="28" width="456" height="456" rx="96" fill="url(#bg)"/>
+  <path d="M88 354 C168 196 257 394 346 238 C397 148 428 139 456 130" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="54" stroke-linecap="round"/>
+  <path d="M90 350 C170 202 255 374 340 238 C390 159 423 145 452 136" fill="none" stroke="url(#ring)" stroke-width="10" stroke-linecap="round"/>
+
+  <g filter="url(#shadow)">
+    <circle cx="256" cy="256" r="150" fill="#07141d" stroke="url(#ring)" stroke-width="10"/>
+    <circle cx="256" cy="256" r="102" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="4"/>
+    <path d="M154 256 H358" stroke="#47d7ac" stroke-width="11" stroke-linecap="round"/>
+    <path d="M256 154 V358" stroke="#ffd166" stroke-width="11" stroke-linecap="round"/>
+    <path d="M184 184 L328 328" stroke="#ffffff" stroke-opacity="0.23" stroke-width="8" stroke-linecap="round"/>
+    <path d="M328 184 L184 328" stroke="#ffffff" stroke-opacity="0.23" stroke-width="8" stroke-linecap="round"/>
+    <g fill="#ff6b6b">
+      <circle cx="256" cy="154" r="15"/>
+      <circle cx="358" cy="256" r="15"/>
+      <circle cx="256" cy="358" r="15"/>
+      <circle cx="154" cy="256" r="15"/>
+    </g>
+    <g fill="#e8fff8">
+      <rect x="209" y="217" width="12" height="78" rx="6"/>
+      <rect x="233" y="198" width="12" height="116" rx="6"/>
+      <rect x="257" y="229" width="12" height="54" rx="6"/>
+      <rect x="281" y="207" width="12" height="98" rx="6"/>
+      <rect x="305" y="235" width="12" height="42" rx="6"/>
+    </g>
+  </g>
+</svg>

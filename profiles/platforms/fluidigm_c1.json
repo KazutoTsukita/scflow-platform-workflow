@@ -1,0 +1,40 @@
+{
+  "name": "fluidigm_c1",
+  "display_name": "Fluidigm C1",
+  "family": "plate_full_length",
+  "description": "Fluidigm C1 plate/full-length single-cell RNA-seq. Public records often represent individual captured cells or wells and require sample-level review before biological-sample interpretation.",
+  "cell_barcode_read": "none",
+  "umi_read": "none",
+  "cell_identity": "sample_or_manifest",
+  "whitelist_policy": "none",
+  "supported_targets": [
+    "manual_review",
+    "star_featurecounts"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "notes": "UniScFlow recognizes Fluidigm C1 metadata and long full-length FASTQs, downloads and organizes the data, then halts by default. After confirming whether GSMs represent cells, wells, or biological samples, rerun mapping explicitly or provide a sample map.",
+  "external_targets": [
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "Fluidigm C1 deposits can encode individual cells/wells as GSMs or runs and may use full-length, UMI, or custom protocols; biological-sample grouping cannot be assumed safely.",
+    "required_inputs": [
+      "Cell/well-to-biological-sample map and confirmation of the C1 protocol/application",
+      "Read pairing, strandedness, and confirmation that no custom barcode/UMI parsing is required"
+    ],
+    "next_steps": [
+      "Determine whether each GSM/run is a cell, well, or biological sample and recover the plate/chip map.",
+      "Confirm that the library is full-length cDNA without unresolved cell-barcode or UMI processing.",
+      "If confirmed, prepare the explicit STAR-featureCounts target and verify one output column per intended cell/well; otherwise use the study-specific pipeline."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "UniScFlow STAR-featureCounts target",
+        "role": "Full-length non-UMI C1 libraries after explicit cell/well and read-layout review"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "Rerun with an explicit Fluidigm C1 STAR-featureCounts target only after confirming full-length non-UMI inputs and the cell/well map."
+  }
+}

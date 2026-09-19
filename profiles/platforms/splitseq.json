@@ -1,0 +1,38 @@
+{
+  "name": "splitseq",
+  "family": "combinatorial_indexing",
+  "description": "SPLiT-seq split-pool combinatorial indexing data.",
+  "cell_barcode_read": "combinatorial",
+  "umi_read": "protocol_specific",
+  "whitelist_policy": "round_barcode_manifest",
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "custom",
+    "starsolo_after_parsing"
+  ],
+  "halt_guidance": {
+    "blocker": "SPLiT-seq requires experiment-specific round-barcode lists, well/sample ranges, and barcode-read orientation before cDNA reads can be assigned to cells.",
+    "required_inputs": [
+      "Barcode sequences for each split-pool round and their read coordinates",
+      "Well-to-sample ranges/manifest and the matching reference"
+    ],
+    "next_steps": [
+      "Recover the round-barcode lists and well/sample assignments from the study supplements or authors.",
+      "Confirm which FASTQ carries cDNA and which carries the concatenated barcode/UMI structure.",
+      "Run a study-matched SPLiT-seq parser, then align the parsed cDNA and generate a cell-by-gene matrix."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "SPLiT-seq pipeline",
+        "url": "https://github.com/yjzhang/split-seq-pipeline",
+        "role": "Round-barcode parsing, alignment, and DGE generation"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "After experiment-specific barcode parsing, use the resulting matrix or a separately validated STAR workflow; UniScFlow does not invent the missing well map."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "microwellseq",
+  "family": "microwell_umi",
+  "description": "Microwell-seq UMI data.",
+  "cell_barcode_read": "R1",
+  "umi_read": "R1",
+  "cdna_read": "R2",
+  "whitelist_policy": "custom_or_infer",
+  "supported_targets": [
+    "manual_review",
+    "starsolo"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "Microwell-seq requires the experiment-specific bead-barcode whitelist, barcode/UMI geometry, and linker/adapter handling.",
+    "required_inputs": [
+      "Microwell-seq barcode whitelist and protocol version",
+      "Confirmed barcode/UMI coordinates, cDNA read, and any linker/adapter trimming rules"
+    ],
+    "next_steps": [
+      "Recover the whitelist and exact read structure from the study supplements or authors.",
+      "Validate barcode orientation and linker/adapter positions against representative FASTQs.",
+      "Run the study-matched preprocessing code or an explicitly configured STARsolo workflow and verify barcode recovery before accepting the matrix."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "Study-matched Microwell-seq preprocessing",
+        "role": "Whitelist correction and barcode/UMI extraction using the deposited protocol resources"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "An explicit STARsolo route can be prepared only after the study-specific whitelist and complete geometry have been validated."
+  }
+}

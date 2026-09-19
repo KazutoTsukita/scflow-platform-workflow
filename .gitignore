@@ -1,0 +1,19 @@
+# Local analyses and data are intentionally excluded from the public repository.
+/validation/
+/manuscript/
+/data/
+/work/
+/results/
+/figures/
+/SRR_download_temporary/
+/cellranger_download/
+/docs/validation.md
+/docs/platform_validation.md
+/tests/test_new_validation_harness.py
+/tests/test_route_scope_strictness.py
+/tests/test_validation120_panel.py
+
+*.pyc
+__pycache__/
+*.egg-info/
+.DS_Store

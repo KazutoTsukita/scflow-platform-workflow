@@ -1,0 +1,21 @@
+{
+  "name": "10x",
+  "family": "droplet_umi_whitelist",
+  "description": "10x Genomics Chromium gene expression data.",
+  "cell_barcode_read": "R1",
+  "cell_barcode_start": 1,
+  "cell_barcode_length": 16,
+  "umi_read": "R1",
+  "umi_start": 17,
+  "umi_length": 12,
+  "cdna_read": "R2",
+  "whitelist_policy": "10x_or_cellranger_chemistry",
+  "supported_targets": [
+    "starsolo",
+    "cellranger"
+  ],
+  "default_target": "starsolo",
+  "external_targets": [
+    "kb"
+  ]
+}

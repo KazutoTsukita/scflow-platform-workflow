@@ -1,0 +1,57 @@
+# Example configuration for mapping with a Cell Ranger 7.1.0 Docker container.
+# Copy this file outside version control, edit host paths, then run:
+#   uniscflow --mode check --config /path/to/my_cellranger710.toml
+#   uniscflow --mode mapping --config /path/to/my_cellranger710.toml
+
+[project]
+ids = ["804521"]
+
+[project.filters]
+# sample_alias = "GSM1,GSM2"
+
+[paths]
+codedir = "tools/legacy"
+filereport_dir = "/path/to/filereport"
+download_script_outputdir = "/path/to/download_script"
+temporary_sra_download_dir = "/path/to/SRR_download_temporary"
+final_file_dir = "/path/to/cellranger710_workspace/raw"
+
+[download]
+max_workers = 2
+parallel = 2
+# Optional platform check. Use "auto" to stop unless metadata confidently
+# identifies the platform, or specify a platform such as "10x".
+# platform = "10x"
+# Set only when your network requires an FTP proxy.
+# ftp_proxy = "proxy.example.ac.jp:8080/"
+
+[read_structure]
+index1 = "1"
+index2 = "NULL"
+read1 = "2"
+read2 = "3"
+
+[mapping]
+enabled = true
+engine = "cellranger"
+container = "cellranger710"
+transcriptome = "/home/yard/ref/refdata-gex-mm10-2020-A"
+localcores = 30
+localmem = 500
+dir_in_container = "/home/yard/raw"
+file_dir_in_host = "/path/to/cellranger710_workspace/raw"
+dir_in_host = "/path/to/cellranger710_workspace/raw"
+download_source = "SRR"
+no_bam = true
+# Cell Ranger 7.x includes intronic reads by default. Uncomment only to be explicit.
+# include_introns = "true"
+# Strict by default: every selected sample must succeed.
+allow_partial_success = false
+
+[prepare]
+target = "auto"
+mapper_output_dir = "/path/to/mapper_ready"
+profiles_dir = "profiles/platforms"
+threads = 30
+# star_index = "/path/to/star_index"
+# salmon_index = "/path/to/salmon_index"
