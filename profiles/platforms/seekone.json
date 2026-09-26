@@ -1,0 +1,42 @@
+{
+  "name": "seekone",
+  "display_name": "SeekOne",
+  "family": "vendor_specific_droplet_umi",
+  "description": "SeekOne microwell-based single-cell RNA-seq. Public FASTQs may require SeekOne-specific barcode/linker extraction, whitelist correction, and preprocessing before STAR-based mapping.",
+  "read_structure": {
+    "mode": "manual_review"
+  },
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "notes": [
+    "UniScFlow downloads and records platform inference for SeekOne datasets, but stops before automatic read assignment and mapping.",
+    "Use vendor documentation or a validated SeekOne preprocessing workflow to extract barcode/UMI information before downstream alignment."
+  ],
+  "external_targets": [
+    "seekone_tools",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "SeekOne processing depends on product-specific barcode/linker rules and whitelists, which vary between 3-prime, 5-prime, and full-length products.",
+    "required_inputs": [
+      "Exact SeekOne product/kit version and matching barcode configuration",
+      "SeekSoul Tools module/configuration and compatible reference"
+    ],
+    "next_steps": [
+      "Confirm whether the dataset is SeekOne 3-prime, 5-prime, or full-length RNA and exclude companion VDJ or multiome libraries.",
+      "Select the matching SeekSoul Tools module and barcode configuration.",
+      "Run SeekSoul Tools and preserve its configuration and validated matrix output."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "SeekSoul Tools",
+        "url": "https://seeksoul.seekgene.com/en/index.html",
+        "role": "SeekOne barcode extraction, alignment, and quantification"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "Use the validated SeekSoul Tools matrix downstream; UniScFlow does not infer proprietary product-specific barcode resources."
+  }
+}

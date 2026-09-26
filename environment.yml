@@ -1,0 +1,23 @@
+name: uniscflow
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - tomli>=2
+  - salmon
+  - pip
+  - setuptools
+  - wheel
+  - pandas
+  - r-base
+  - r-readr
+  - r-dplyr
+  - r-stringr
+  - parallel
+  - pigz
+  - wget
+  - sra-tools
+  - star=2.7.10b
+  - samtools
+  - subread

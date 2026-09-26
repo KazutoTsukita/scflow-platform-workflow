@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use UniScFlow, please cite this software release and the accompanying manuscript."
+title: "UniScFlow: public-accession reconstruction and guarded remapping of single-cell RNA-seq raw data"
+type: software
+authors:
+  - family-names: Tsukita
+    given-names: Kazuto
+    affiliation: "Kyoto University; Teikyo University"
+  - family-names: Kikuya
+    given-names: Akihiro
+    affiliation: "Kyoto University"
+  - family-names: Yamakado
+    given-names: Hodaka
+    affiliation: "Kyoto University"
+  - family-names: Maki
+    given-names: Takakuni
+    affiliation: "Kyoto University"
+  - family-names: Matsumoto
+    given-names: Riki
+    affiliation: "Kyoto University"
+version: 1.0.0
+date-released: 2026-09-24
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22271248"
+license: BSD-3-Clause
+repository-code: "https://github.com/KazutoTsukita/scflow-platform-workflow"
+url: "https://doi.org/10.5281/zenodo.22271248"
+keywords:
+  - single-cell RNA sequencing
+  - single-nucleus RNA sequencing
+  - public data reuse
+  - workflow
+  - STARsolo
+  - reproducibility

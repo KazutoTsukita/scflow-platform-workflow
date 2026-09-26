@@ -1,0 +1,38 @@
+{
+  "name": "bdrhapsody",
+  "family": "droplet_or_microwell_umi_vendor",
+  "description": "BD Rhapsody or BD Resolve UMI data.",
+  "cell_barcode_read": "protocol_specific",
+  "umi_read": "protocol_specific",
+  "whitelist_policy": "vendor",
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "bd_pipeline",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "BD Rhapsody processing depends on assay type, barcode references, multiplexing/sample-tag design, and optional AbSeq or targeted-panel resources that are not safely inferable from deposited FASTQs alone.",
+    "required_inputs": [
+      "BD Rhapsody assay and cartridge/chemistry version",
+      "Matching reference archive plus sample-tag, AbSeq, or targeted-panel files when used"
+    ],
+    "next_steps": [
+      "Confirm whether the library is WTA or targeted and whether sample tags or AbSeq libraries are present.",
+      "Build or obtain the matching BD reference archive and supplemental reference files.",
+      "Run the FASTQs with the BD Rhapsody Analysis Pipeline and preserve its configuration and matrix outputs."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "BD Rhapsody Analysis Pipeline",
+        "url": "https://bd-rhapsody-bioinfo-docs.genomics.bd.com/",
+        "role": "BD-supported barcode processing, alignment, and matrix generation"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "Use the validated BD pipeline output downstream; UniScFlow does not substitute a generic STARsolo command for BD barcode processing."
+  }
+}

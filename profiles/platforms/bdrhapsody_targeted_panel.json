@@ -1,0 +1,44 @@
+{
+  "name": "bdrhapsody_targeted_panel",
+  "family": "droplet_or_microwell_umi_vendor",
+  "description": "BD Rhapsody targeted single-cell transcript panel data.",
+  "parent_platform": "bdrhapsody",
+  "assay_scope": "targeted_transcriptomics",
+  "cell_barcode_read": "protocol_specific",
+  "umi_read": "protocol_specific",
+  "whitelist_policy": "vendor",
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "bd_rhapsody_targeted_pipeline",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "BD Rhapsody targeted panels require the exact panel definition, any custom-primer targets, and vendor barcode/reference resources; a whole-transcriptome STARsolo matrix would be incomplete and misleading.",
+    "required_inputs": [
+      "Exact BD Rhapsody targeted panel name, catalog number, and version",
+      "Complete targeted gene/transcript list plus every supplemental custom-primer sequence",
+      "BD Rhapsody cartridge/chemistry version and matching barcode/reference archive",
+      "Sample-tag, multiplexing, AbSeq, or other feature-barcode definitions when used",
+      "Reference FASTA/GTF and BD pipeline configuration matching the deposited experiment"
+    ],
+    "next_steps": [
+      "Recover the panel manifest and custom-primer target list from the experiment records or submitter.",
+      "Match the cartridge, barcode reference, genome reference, sample tags, and optional AbSeq resources to the deposited FASTQs.",
+      "Run the FASTQs with the BD Rhapsody Targeted Analysis Pipeline and preserve the complete configuration and software version.",
+      "Validate cell barcodes, target identities, target-level counts, and sample-tag demultiplexing before downstream analysis."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "BD Rhapsody Targeted Analysis Pipeline",
+        "url": "https://bd-rhapsody-bioinfo-docs.genomics.bd.com/",
+        "role": "BD-supported barcode processing and cell-by-target matrix generation"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "Use the validated vendor cell-by-target matrix downstream and label it as targeted transcriptomics; do not present it as a whole-transcriptome GEX matrix."
+  }
+}

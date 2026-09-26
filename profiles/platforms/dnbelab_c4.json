@@ -1,0 +1,42 @@
+{
+  "name": "dnbelab_c4",
+  "family": "vendor_specific_droplet_umi",
+  "description": "DNBelab C4 / DNBelab C Series 3' single-cell RNA-seq data recognized from metadata and FASTQ structure. Automatic mapping is intentionally halted until DNBelab/PISA-compatible preprocessing resources are supplied.",
+  "cell_barcode_read": "R1",
+  "cell_barcode_start": 1,
+  "cell_barcode_length": 20,
+  "umi_read": "R1",
+  "umi_start": 21,
+  "umi_length": 10,
+  "cdna_read": "R2",
+  "whitelist_policy": "none_or_protocol_specific",
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "notes": "Do not infer from product-family wording alone. Use this profile when metadata indicates DNBelab C4/C Series/PISA/DNBSEQ/DIPSEQ and FASTQ evidence shows a DNBelab-like barcode/UMI read plus a long cDNA read. Public FASTQs can require DNBelab/PISA-specific barcode correction and preprocessing; UniScFlow therefore routes this platform to download + halt by default rather than generating STARsolo commands directly.",
+  "external_targets": [
+    "starsolo_after_vendor_preprocessing"
+  ],
+  "halt_guidance": {
+    "blocker": "DNBelab C Series reads require chemistry-matched barcode parsing/correction and PISA/DNBelab preprocessing before a STAR-compatible cDNA stream can be trusted.",
+    "required_inputs": [
+      "DNBelab C Series kit version and barcode structure/whitelist",
+      "PISA or DNBelab analysis configuration and a matching reference"
+    ],
+    "next_steps": [
+      "Confirm the exact DNBelab C Series chemistry from the experiment documentation.",
+      "Run PISA/DNBelab preprocessing with the matching barcode configuration.",
+      "Use the vendor-generated matrix, or explicitly validate corrected barcode/cDNA streams before any STARsolo analysis."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "DNBelab C Series scRNA analysis software",
+        "url": "https://github.com/MGI-tech-bioinformatics/DNBelab_C_Series_scRNA-analysis-software",
+        "role": "Chemistry-aware PISA/WDL preprocessing and quantification"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "A STARsolo workflow is appropriate only after vendor-compatible barcode correction has produced validated inputs; the standard UniScFlow route remains halted."
+  }
+}

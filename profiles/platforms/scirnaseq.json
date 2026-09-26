@@ -1,0 +1,38 @@
+{
+  "name": "scirnaseq",
+  "family": "combinatorial_indexing",
+  "description": "sci-RNA-seq or related single-cell combinatorial indexing data.",
+  "cell_barcode_read": "combinatorial",
+  "umi_read": "protocol_specific",
+  "whitelist_policy": "round_barcode_manifest",
+  "supported_targets": [
+    "manual_review"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "custom",
+    "starsolo_after_parsing"
+  ],
+  "halt_guidance": {
+    "blocker": "sci-RNA-seq uses experiment-specific RT, ligation, and PCR index sets whose sequence lists and sample assignments are required to reconstruct cell identities.",
+    "required_inputs": [
+      "RT/ligation/PCR barcode lists and read coordinates for the exact protocol version",
+      "Experiment-specific barcode-to-sample mapping and species/reference information"
+    ],
+    "next_steps": [
+      "Identify the sci-RNA-seq protocol generation and recover all barcode/index tables from supplements or authors.",
+      "Verify barcode orientation and index-round order against the deposited FASTQs.",
+      "Run the study-matched sci-RNA-seq pipeline and retain its barcode tables and matrix outputs."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "sci-RNA-seq3 pipeline",
+        "url": "https://github.com/JunyueC/sci-RNA-seq3_pipeline",
+        "role": "Combinatorial-index parsing and matrix generation when the study uses a compatible protocol"
+      }
+    ],
+    "resume_mode": "external_workflow",
+    "resume": "Use a protocol-matched sci-RNA-seq output downstream; a generic STARsolo geometry is not sufficient to reconstruct multi-round cell barcodes."
+  }
+}

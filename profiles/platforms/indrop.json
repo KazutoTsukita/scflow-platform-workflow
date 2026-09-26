@@ -1,0 +1,40 @@
+{
+  "name": "indrop",
+  "family": "complex_barcode_umi",
+  "description": "inDrop data; exact barcode geometry can be dataset-specific.",
+  "cell_barcode_read": "R1",
+  "umi_read": "R1",
+  "cdna_read": "R2",
+  "whitelist_policy": "custom",
+  "supported_targets": [
+    "manual_review",
+    "starsolo"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "zumis",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "inDrop barcode structure and whitelist depend on chemistry generation and library implementation; the version cannot be selected safely from a platform name alone.",
+    "required_inputs": [
+      "inDrop chemistry/version and matching barcode whitelist",
+      "Confirmed barcode segments, UMI coordinates, cDNA read, and linker handling"
+    ],
+    "next_steps": [
+      "Identify the inDrop chemistry generation from methods and supplementary files.",
+      "Obtain the matching whitelist and verify all barcode/linker coordinates against FASTQ content.",
+      "Run zUMIs or a chemistry-matched parser, then validate barcode recovery and cell counts before using the matrix."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "zUMIs",
+        "url": "https://github.com/sdparekh/zUMIs",
+        "role": "Configurable barcode/UMI parsing when the exact inDrop geometry is known"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "An explicit STARsolo route is appropriate only after the chemistry-specific whitelist and barcode segments have been validated."
+  }
+}

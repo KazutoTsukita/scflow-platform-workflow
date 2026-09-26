@@ -1,0 +1,45 @@
+{
+  "name": "smartseq3",
+  "family": "plate_full_length_umi",
+  "description": "Smart-seq3 full-length data with 5-prime UMI information.",
+  "cell_barcode_read": "none",
+  "umi_read": "R1",
+  "cell_identity": "sample_or_manifest",
+  "whitelist_policy": "none",
+  "supported_targets": [
+    "manual_review",
+    "salmon"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "smartseq3_pipeline",
+    "star"
+  ],
+  "halt_guidance": {
+    "blocker": "Smart-seq3 combines full-length coverage with 5-prime UMI information; molecule-aware processing requires protocol-specific UMI/TSO parsing and preserved cell/well identity.",
+    "required_inputs": [
+      "Smart-seq3 protocol version and 5-prime UMI/TSO structure",
+      "Cell/well-to-sample mapping and the desired molecule-aware or transcript-level endpoint"
+    ],
+    "next_steps": [
+      "Confirm that cell or well identities are preserved in GSM/run metadata or file names.",
+      "Use the Smart-seq3/zUMIs workflow for UMI-aware molecule counting, or document why a non-UMI transcript-level endpoint is intended.",
+      "Validate cell count, molecule count, and full-length coverage before downstream use."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "Smart-seq3 computational workflow",
+        "url": "https://github.com/sandberg-lab/Smart-seq3",
+        "role": "Smart-seq3 molecule reconstruction and UMI-aware processing"
+      },
+      {
+        "name": "zUMIs",
+        "url": "https://github.com/sdparekh/zUMIs",
+        "role": "Smart-seq3 barcode/UMI-aware quantification"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "Use the Smart-seq3/zUMIs endpoint for molecule-aware counts; UniScFlow's optional Salmon target should be used only after explicitly choosing a non-UMI transcript-level endpoint."
+  }
+}

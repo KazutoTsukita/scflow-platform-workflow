@@ -1,0 +1,40 @@
+{
+  "name": "celseq2",
+  "family": "plate_umi",
+  "description": "CEL-seq2 plate-based UMI data.",
+  "cell_barcode_read": "R1",
+  "umi_read": "R1",
+  "cdna_read": "R2",
+  "whitelist_policy": "plate_manifest",
+  "supported_targets": [
+    "manual_review",
+    "starsolo"
+  ],
+  "default_target": "manual_review",
+  "requires_manifest_review": true,
+  "external_targets": [
+    "zumis",
+    "custom"
+  ],
+  "halt_guidance": {
+    "blocker": "CEL-seq2 needs the experiment-specific well-barcode list, plate-to-sample map, and confirmed barcode/UMI coordinates before reads can be assigned safely.",
+    "required_inputs": [
+      "Well barcode sequences and plate/well-to-sample manifest",
+      "Confirmed barcode, UMI, and cDNA read coordinates plus strandedness"
+    ],
+    "next_steps": [
+      "Recover the well barcode and plate manifest from study supplements or authors.",
+      "Confirm read roles and barcode/UMI coordinates against representative FASTQ sequences.",
+      "Run zUMIs or an explicitly configured STARsolo workflow and validate the expected wells before accepting the matrix."
+    ],
+    "recommended_workflows": [
+      {
+        "name": "zUMIs",
+        "url": "https://github.com/sdparekh/zUMIs",
+        "role": "Configurable plate-barcode/UMI parsing and quantification"
+      }
+    ],
+    "resume_mode": "manual_review_then_uniscflow",
+    "resume": "After supplying and validating the plate manifest and exact geometry, an explicit CEL-seq2 STARsolo target can be prepared; do not remove the halt solely from the platform label."
+  }
+}

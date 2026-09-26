@@ -1,0 +1,12 @@
+include README.md
+include README.ja.md
+include LICENSE
+include THIRD_PARTY_NOTICES.md
+include environment.yml
+include CITATION.cff
+include .zenodo.json
+include CHANGELOG.md
+include RELEASE_NOTES.md
+recursive-include config *.toml
+recursive-include profiles/platforms *.json
+recursive-include tools/legacy *.py *.R *.sh

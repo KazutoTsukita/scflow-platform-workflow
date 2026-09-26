@@ -1,0 +1,20 @@
+{
+  "name": "seqwell",
+  "family": "droplet_umi_no_fixed_whitelist",
+  "description": "Seq-Well or Seq-Well S3 data with barcode/UMI read plus cDNA read.",
+  "cell_barcode_read": "R1",
+  "cell_barcode_start": 1,
+  "cell_barcode_length": 12,
+  "umi_read": "R1",
+  "umi_start": 13,
+  "umi_length": 8,
+  "cdna_read": "R2",
+  "whitelist_policy": "none_or_infer",
+  "supported_targets": [
+    "starsolo"
+  ],
+  "default_target": "starsolo",
+  "external_targets": [
+    "kb"
+  ]
+}
